@@ -6,8 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coolmarvel/mimicoin.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "keywords": [],
-  "author": "",
+  "author": "coolmarvel",
   "license": "ISC",
   "dependencies": {
     "crypto-js": "^4.1.1",
