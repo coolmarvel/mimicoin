@@ -4,7 +4,7 @@ const ec = new EC("secp256k1");
 
 // Your private key goes here
 const myKey = ec.keyFromPrivate(
-  "4da73bae30009e8284e2c1ee42ff77c22a99fe03b8c36937f4471964efc2f921"
+  "fc1f0989d425b6e47ca9b5165cb9119773a62c0c2d99bd1d8c90bf5c268c0755"
 );
 
 // From that we can calculate your public key (which doubles as your wallet address)
