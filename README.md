@@ -1,0 +1,3 @@
+# mimicoin
+
+blockchain_project
