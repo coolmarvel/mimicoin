@@ -3,9 +3,7 @@ const EC = require("elliptic").ec;
 const ec = new EC("secp256k1");
 
 // Your private key goes here
-const myKey = ec.keyFromPrivate(
-  "fc1f0989d425b6e47ca9b5165cb9119773a62c0c2d99bd1d8c90bf5c268c0755"
-);
+const myKey = ec.keyFromPrivate();
 
 // From that we can calculate your public key (which doubles as your wallet address)
 const myWalletAddress = myKey.getPublic("hex");
@@ -25,21 +23,21 @@ mimiCoin.addTransaction(tx1);
 mimiCoin.minePendingTransactions(myWalletAddress);
 
 // Create second transaction
-const tx2 = new Transaction(myWalletAddress, "address1", 50);
-tx2.signTransaction(myKey);
-mimiCoin.addTransaction(tx2);
+// const tx2 = new Transaction(myWalletAddress, "address1", 50);
+// tx2.signTransaction(myKey);
+// mimiCoin.addTransaction(tx2);
 
-// Mine block
-mimiCoin.minePendingTransactions(myWalletAddress);
+// // Mine block
+// mimiCoin.minePendingTransactions(myWalletAddress);
 
-console.log();
-console.log(
-  `Balance of marvel is ${mimiCoin.getBalanceOfAddress(myWalletAddress)}`
-);
+// console.log();
+// console.log(
+//   `Balance of marvel is ${mimiCoin.getBalanceOfAddress(myWalletAddress)}`
+// );
 
-// Uncomment this line if you want to test tampering with the chain
-// mimiCoin.chain[1].transactions[0].amount = 10;
+// // Uncomment this line if you want to test tampering with the chain
+// // mimiCoin.chain[1].transactions[0].amount = 10;
 
-// Check if the chain is valid
-console.log();
-console.log("Blockchain valid?", mimiCoin.isChainValid() ? "Yes" : "No");
+// // Check if the chain is valid
+// console.log();
+// console.log("Blockchain valid?", mimiCoin.isChainValid() ? "Yes" : "No");

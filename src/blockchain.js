@@ -88,7 +88,7 @@ class Blockchain {
   }
 
   createGenesisBlock() {
-    return new Block(0, "2022/01/10", "Genesis block", "0");
+    return new Block(0, "2022/01/10", "곱창은 역시 소곱창", "0");
   }
 
   getLatestBlock() {
@@ -131,7 +131,7 @@ class Blockchain {
     if (
       this.getBalanceOfAddress(Transaction.fromAddress) < Transaction.amount
     ) {
-      throw new Error("Not enough balance");
+      throw new Error("잔고가 부족합니다.");
     }
 
     this.pendingTransactions.push(Transaction);
